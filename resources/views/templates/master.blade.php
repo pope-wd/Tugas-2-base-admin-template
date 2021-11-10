@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -38,7 +39,15 @@
 
   @include('templates.sidebar')
 
-  @yield('content')
+  <div class="content-wrapper">
+    <div class="content">
+      <div class="container-fluid">
+        
+        
+      </div>
+      @yield('content')
+    </div>
+  </div>
  
   @include('templates.footer')
 
