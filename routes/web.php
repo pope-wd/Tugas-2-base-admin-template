@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\CustomersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +16,8 @@ use App\Http\Controllers\ProdukController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/dashboard', function () {
+    return view('pages.dashboard');
 });
 
 Route::get('/master', function () {
@@ -34,3 +36,15 @@ Route::get('/produkdelete/delete/{id}', [ProdukController::class, 'destroy'])
 
 Route::get('/tambah', [ProdukController::class, 'create'])
 ->name('tambah');
+
+Route::get('/categories', [CategoriesController::class, 'index'])
+->name('categories');
+
+Route::get('/categoriesdelete/delete/{id}', [CategoriesController::class, 'destroy'])
+->name('categoriesdelete');
+
+Route::get('/customers', [CustomersController::class, 'index'])
+->name('customers');
+
+Route::get('/customersdelete/delete/{id}', [CustomersController::class, 'destroy'])
+->name('customersdelete');

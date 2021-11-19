@@ -67,9 +67,15 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/boxed.html" class="nav-link">
+                <a href="{{route('categories')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Boxed</p>
+                  <p>Categories</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('customers')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Customers</p>
                 </a>
               </li>
             </ul>
